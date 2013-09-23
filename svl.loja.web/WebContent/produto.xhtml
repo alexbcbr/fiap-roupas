@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<f:view transient="true">
+	<div
+		style="width: 100%; font-size: 36px; line-height: 48px; background-color: navy; color: white">Fiap Roupas</div>
+	
+		<h:head>
+			<h:outputStylesheet library="css" name="style.css"></h:outputStylesheet>
+		</h:head>
+		
+		<h:body>
+		<h:form id="frmCadastro">
+		Código do Produto: <h:inputText value="#{p.pedido.codProduto}" id="codProduto"/><br /><br />
+		
+		<h:commandButton styleClass="button" value="Comprar" action="#{p.btnPesquisarProd}" id="btnPesquisar"/><br />
+			
+		Descrição: <h:outputText value="#{p.pedido.descricao}" id="descricao"/><br /><br />
+		Preço: <h:outputText value="#{p.pedido.precoUnitario}" id="preco"/><br /><br />
+			<h:graphicImage library="catalogo" name="#{p.pedido.foto}"></h:graphicImage>
+
+		</h:form>
+		</h:body>
+</f:view>	
+
+</html>
